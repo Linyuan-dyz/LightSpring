@@ -71,7 +71,6 @@ public class ClassUtils {
     }
 
     public static Method getInitMethod(String initMethodName, Class<?> type) throws NoSuchMethodException {
-        //TODO:处理多个init方法（即多个PostConstruct注解）的情况
         if (initMethodName == null || initMethodName.isEmpty()) {
             Method[] methods = type.getMethods();
             for (Method method : methods) {
@@ -102,7 +101,7 @@ public class ClassUtils {
     }
 
     public static Constructor<?> getSituatableConstructor(Class<?> clazz) {
-        //  TODO:选择构造函数中的参数个数最多的构造函数
+        // 选择构造函数中的参数个数最多的构造函数
         Constructor<?>[] constructors = clazz.getConstructors();
         Constructor<?> situatableConstructor = null;
         int parameterCount = 0;
