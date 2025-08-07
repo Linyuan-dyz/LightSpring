@@ -1,9 +1,12 @@
 package com.lightspring.Context;
 
+import org.yaml.snakeyaml.introspector.Property;
+
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.time.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.function.Function;
@@ -44,6 +47,16 @@ public class ResourceResolver {
         converterMap.put(ZonedDateTime.class, ZonedDateTime::parse);
         converterMap.put(Duration.class, Duration::parse);
         converterMap.put(ZoneId.class, ZoneId::of);
+    }
+
+    public void addProperty(PropertyExpr propertyExpr) {
+        propertyMap.put(propertyExpr.key, propertyExpr.defaultValue);
+    }
+
+    public void addProperties(List<PropertyExpr> propertyExprs) {
+        for (PropertyExpr propertyExpr : propertyExprs) {
+            addProperty(propertyExpr);
+        }
     }
 
     public <T> T getProperty(String key, Class<T> type) {
@@ -124,7 +137,7 @@ public class ResourceResolver {
 
     }
 
-    private static class PropertyExpr {
+    public static class PropertyExpr {
         public String key;
         public String defaultValue;
 

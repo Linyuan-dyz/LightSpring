@@ -10,7 +10,7 @@ public class testBeanPostProcess {
 
     @Test
     public void test01() throws Exception {
-        var ctx = new AnnotationConfigApplicationContext(ScanApplication.class);
+        var ctx = new AnnotationConfigApplicationContext(ScanApplication.class, null);
 
         // 获取OriginBean的实例,此处获取的应该是SendProxyBeanProxy:
         OriginBean proxy = ctx.getBean(OriginBean.class);

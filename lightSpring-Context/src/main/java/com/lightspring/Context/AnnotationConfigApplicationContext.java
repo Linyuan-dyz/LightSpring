@@ -1,7 +1,9 @@
 package com.lightspring.Context;
 
 import com.lightspring.Annotations.*;
+import com.lightspring.Tools.ApplicationContextUtils;
 import jakarta.annotation.Nullable;
+import org.yaml.snakeyaml.introspector.Property;
 
 import java.io.IOException;
 import java.lang.reflect.*;
@@ -13,6 +15,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 
+import static com.lightspring.Tools.ApplicationContextUtils.closeApplicationContext;
 import static com.lightspring.Tools.ClassUtils.*;
 
 public class AnnotationConfigApplicationContext implements ConfigurableApplicationContext {
@@ -23,9 +26,16 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
 
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
 
-    private final ResourceResolver resourceResolver = new ResourceResolver("src/main/resources/test.properties");
+    private ResourceResolver resourceResolver = new ResourceResolver("E:\\LightSpring\\lightSpring-Context\\src\\main\\resources\\test.properties");
 
-    public AnnotationConfigApplicationContext(Class<?> type) throws Exception {
+    public AnnotationConfigApplicationContext(Class<?> type, @Nullable ResourceResolver.PropertyExpr propertyExpr) throws Exception {
+        //  将当前容器储存到工具类中，方便取用
+        ApplicationContextUtils.setApplicationContext(this);
+        if (resourceResolver != null) {
+            if (propertyExpr != null) {
+                this.resourceResolver.addProperty(propertyExpr);
+            }
+        }
         //  扫描所有包
         List<String> list = scanClassNames(type);
         //  进行beanDefinition创建,已经校验了@Component注解
@@ -76,6 +86,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         beanDefinitionMap.clear();
         dependNames.clear();
         beanPostProcessors.clear();
+        closeApplicationContext();
     }
 
     public <T> T getBean(Class<T> clazz) {
