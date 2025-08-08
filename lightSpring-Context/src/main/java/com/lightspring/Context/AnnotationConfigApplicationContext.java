@@ -28,14 +28,58 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
 
     private ResourceResolver resourceResolver = new ResourceResolver("E:\\LightSpring\\lightSpring-Context\\src\\main\\resources\\test.properties");
 
-    public AnnotationConfigApplicationContext(Class<?> type, @Nullable ResourceResolver.PropertyExpr propertyExpr) throws Exception {
+    public AnnotationConfigApplicationContext(Class<?> type) throws Exception {
         //  将当前容器储存到工具类中，方便取用
         ApplicationContextUtils.setApplicationContext(this);
-        if (resourceResolver != null) {
-            if (propertyExpr != null) {
-                this.resourceResolver.addProperty(propertyExpr);
-            }
+        //  扫描所有包
+        List<String> list = scanClassNames(type);
+        //  进行beanDefinition创建,已经校验了@Component注解
+        createBeanDefinitions(list);
+        //  进行@Configuration注解修饰的工厂类bean创建
+        createBeanFactories();
+        //  进行BeanPostProcessor创建
+        createBeanPostProcessors();
+        //  进行普通bean创建并使用BeanPostProcessor处理
+        createCommonBeans();
+        //  进行所有bean的字段注入
+        beanDefinitionMap.values().forEach(this::injectBeans);
+        //  进行init方法和@PostConstruct注解修饰方法的初始化
+        beanDefinitionMap.values().forEach(this::initBeans);
+    }
+
+    public AnnotationConfigApplicationContext(Class<?> type, ResourceResolver.PropertyExpr propertyExpr) throws Exception {
+        if (propertyExpr != null) {
+            this.resourceResolver.addProperty(propertyExpr);
         }
+        //  将当前容器储存到工具类中，方便取用
+        ApplicationContextUtils.setApplicationContext(this);
+        //  扫描所有包
+        List<String> list = scanClassNames(type);
+        //  进行beanDefinition创建,已经校验了@Component注解
+        createBeanDefinitions(list);
+        //  进行@Configuration注解修饰的工厂类bean创建
+        createBeanFactories();
+        //  进行BeanPostProcessor创建
+        createBeanPostProcessors();
+        //  进行普通bean创建并使用BeanPostProcessor处理
+        createCommonBeans();
+        //  进行所有bean的字段注入
+        beanDefinitionMap.values().forEach(this::injectBeans);
+        //  进行init方法和@PostConstruct注解修饰方法的初始化
+        beanDefinitionMap.values().forEach(this::initBeans);
+    }
+
+    public AnnotationConfigApplicationContext(Class<?> type, Properties properties) throws Exception {
+        if (properties != null && !properties.isEmpty()) {
+            properties.forEach((key, value) -> {
+                if (key instanceof String && value instanceof String) {
+                    ResourceResolver.PropertyExpr propertyExpr = new ResourceResolver.PropertyExpr((String) key, (String) value);
+                    this.resourceResolver.addProperty(propertyExpr);
+                }
+            });
+        }
+        //  将当前容器储存到工具类中，方便取用
+        ApplicationContextUtils.setApplicationContext(this);
         //  扫描所有包
         List<String> list = scanClassNames(type);
         //  进行beanDefinition创建,已经校验了@Component注解
@@ -349,6 +393,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
             //  使用工厂方法
             String factoryName = factoryMethod.getDeclaringClass().getName();
             Object factoryBean = beanDefinitionMap.get(factoryName).getInstance();
+            factoryMethod.setAccessible(true);
             try {
                 instance = factoryMethod.invoke(factoryBean, args);
             } catch (Exception e) {
@@ -443,12 +488,13 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         if (importAnnotation == null) {
             return;
         }
-        String[] values = importAnnotation.value();
-        for (String value : values) {
-            String name = value.substring(0, value.length() - ".class".length());
-            name = name.replace('/', '.');
-            list.add(name);
-        }
+        Class<?> clazz = importAnnotation.value();
+        list.add(clazz.getName());
+//        for (String value : values) {
+//            String name = value.substring(0, value.length() - ".class".length());
+//            name = name.replace('/', '.');
+//            list.add(name);
+//        }
     }
 
     private static List<String> getPackageName(Class<?> type, ComponentScan componentScan) {

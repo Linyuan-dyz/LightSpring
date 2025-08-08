@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="896ef077-a440-4072-9321-8c6e61404c41" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/lightSpring-JDBC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-AOP/src/main/java/com/lightSpring/AnnotationPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-AOP/src/main/java/com/lightSpring/AnnotationPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-AOP/target/classes/com/lightSpring/AnnotationPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-AOP/target/classes/com/lightSpring/AnnotationPostProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Annotations/Import.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Annotations/Import.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/AnnotationConfigApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/AnnotationConfigApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/test/java/com/lightspring/testBeanPostProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/test/java/com/lightspring/testBeanPostProcess.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Linyuan-dyz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Linyuan-dyz/LightSpring.git&quot;,
+    &quot;accountId&quot;: &quot;f1d1c447-b5fc-4fd2-ab32-83ab9d5c653a&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="E:\apache-maven-3.9.9" />
+        <option name="localRepository" value="E:\apache-maven-3.9.9\mvn_resp" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.9.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="30xR1nJBiUdNmLyGkxvV9tjEDr9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.JdbcWithTxTest.testJdbcWithTx.executor": "Run",
+    "JUnit.JdbcWithoutTxTest.testJdbcWithoutTx.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.JdbcWithTxTest.testJdbcWithTx">
+    <configuration name="JdbcWithTxTest.testJdbcWithTx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightSpring-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lightSpring.withTX.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lightSpring.withTX" />
+      <option name="MAIN_CLASS_NAME" value="com.lightSpring.withTX.JdbcWithTxTest" />
+      <option name="METHOD_NAME" value="testJdbcWithTx" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcWithoutTxTest.testJdbcWithoutTx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightSpring-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lightSpring.withoutTX.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lightSpring.withoutTX" />
+      <option name="MAIN_CLASS_NAME" value="com.lightSpring.withoutTX.JdbcWithoutTxTest" />
+      <option name="METHOD_NAME" value="testJdbcWithoutTx" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JdbcWithTxTest.testJdbcWithTx" />
+        <item itemvalue="JUnit.JdbcWithoutTxTest.testJdbcWithoutTx" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="896ef077-a440-4072-9321-8c6e61404c41" name="更改" comment="" />
+      <created>1754567026149</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754567026149</updated>
+      <workItem from="1754567027702" duration="20290000" />
+      <workItem from="1754643947049" duration="3421000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lightSpring-JDBC/src/test/java/com/lightSpring/withTX/JdbcWithTxTest.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.lightspring.Context.ResourceResolver" memberName="propertyMap" />
+        <PinnedItemInfo parentTag="com.lightspring.Context.BeanDefinition" memberName="instance" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

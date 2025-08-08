@@ -2,6 +2,7 @@ package com.lightspring;
 
 import com.lightspring.Annotations.ComponentScan;
 import com.lightspring.Context.AnnotationConfigApplicationContext;
+import com.lightspring.Context.ResourceResolver;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +11,7 @@ public class testBeanPostProcess {
 
     @Test
     public void test01() throws Exception {
-        var ctx = new AnnotationConfigApplicationContext(ScanApplication.class, null);
+        var ctx = new AnnotationConfigApplicationContext(ScanApplication.class, (ResourceResolver.PropertyExpr) null);
 
         // 获取OriginBean的实例,此处获取的应该是SendProxyBeanProxy:
         OriginBean proxy = ctx.getBean(OriginBean.class);

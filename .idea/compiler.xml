@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lightSpring-Context" />
-        <module name="lightSpring-AOP (1)" />
         <module name="lightSpring-AOP" />
+        <module name="lightSpring-JDBC" />
       </profile>
     </annotationProcessing>
   </component>

@@ -44,6 +44,9 @@ public abstract class AnnotationPostProcessor <A extends Annotation> implements 
             String handlerName = null;
             try {
                 handlerName = (String) annotation.annotationType().getMethod("value").invoke(annotation);
+                if (handlerName.contains("/")) {
+                    handlerName = handlerName.replace("/", ".");
+                }
             } catch (IllegalAccessException | InvocationTargetException e) {
                 throw new RuntimeException(e);
             } catch (NoSuchMethodException e) {
