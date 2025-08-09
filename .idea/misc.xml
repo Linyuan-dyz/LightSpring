@@ -7,7 +7,15 @@
         <option value="$PROJECT_DIR$/lightSpring-AOP/pom.xml" />
         <option value="$PROJECT_DIR$/lightSpring-Context/pom.xml" />
         <option value="$PROJECT_DIR$/lightSpring-JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/lightSpring-MVC/pom.xml" />
+        <option value="$PROJECT_DIR$/lightSpring-Web/pom.xml" />
+        <option value="$PROJECT_DIR$/lightSpring-Boot/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/lightSpring-MVC/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">

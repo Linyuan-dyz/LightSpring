@@ -1,13 +1,11 @@
-package com.lightspring.Annotations;
+package com.lightSpring.Annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.util.List;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Import {
-    Class<?>[] value();
+public @interface ResponseBody {
 }

@@ -1,13 +1,14 @@
-package com.lightspring.Annotations;
+package com.lightSpring.Annotations;
+
+import com.lightspring.Annotations.Component;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.util.List;
 
+@Component
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Import {
-    Class<?>[] value();
+public @interface RestController {
 }

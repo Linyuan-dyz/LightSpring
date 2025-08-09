@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896ef077-a440-4072-9321-8c6e61404c41" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/lightSpring-JDBC/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="896ef077-a440-4072-9321-8c6e61404c41" name="更改" comment="finish LightSpring-JDBC">
+      <change afterPath="$PROJECT_DIR$/lightSpring-Web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightSpring-AOP/src/main/java/com/lightSpring/AnnotationPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-AOP/src/main/java/com/lightSpring/AnnotationPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightSpring-AOP/target/classes/com/lightSpring/AnnotationPostProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-AOP/target/classes/com/lightSpring/AnnotationPostProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Annotations/Import.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Annotations/Import.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/AnnotationConfigApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/AnnotationConfigApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/test/java/com/lightspring/testBeanPostProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/test/java/com/lightspring/testBeanPostProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/ResourceResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/lightSpring-Context/src/main/java/com/lightspring/Context/ResourceResolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +20,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Exception" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -72,13 +68,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.DispatcherServletTest.getApiHello.executor": "Debug",
+    "JUnit.DispatcherServletTest.getHello.executor": "Run",
     "JUnit.JdbcWithTxTest.testJdbcWithTx.executor": "Run",
     "JUnit.JdbcWithoutTxTest.testJdbcWithoutTx.executor": "Debug",
+    "JUnit.PathUtilsTest.validPath.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/LightSpring/lightSpring-Web/src/test/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,7 +91,44 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.JdbcWithTxTest.testJdbcWithTx">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\LightSpring\lightSpring-Web\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DispatcherServletTest.getHello">
+    <configuration name="DispatcherServletTest.getApiHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightSpring-Web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lightSpring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lightSpring" />
+      <option name="MAIN_CLASS_NAME" value="com.lightSpring.DispatcherServletTest" />
+      <option name="METHOD_NAME" value="getApiHello" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DispatcherServletTest.getHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightSpring-Web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lightSpring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lightSpring" />
+      <option name="MAIN_CLASS_NAME" value="com.lightSpring.DispatcherServletTest" />
+      <option name="METHOD_NAME" value="getHello" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JdbcWithTxTest.testJdbcWithTx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lightSpring-JDBC" />
       <extension name="coverage">
@@ -124,8 +161,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PathUtilsTest.validPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightSpring-Web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lightSpring.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lightSpring.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.lightSpring.utils.PathUtilsTest" />
+      <option name="METHOD_NAME" value="validPath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DispatcherServletTest.getHello" />
+        <item itemvalue="JUnit.DispatcherServletTest.getApiHello" />
+        <item itemvalue="JUnit.PathUtilsTest.validPath" />
         <item itemvalue="JUnit.JdbcWithTxTest.testJdbcWithTx" />
         <item itemvalue="JUnit.JdbcWithoutTxTest.testJdbcWithoutTx" />
       </list>
@@ -148,12 +204,25 @@
       <option name="presentableId" value="Default" />
       <updated>1754567026149</updated>
       <workItem from="1754567027702" duration="20290000" />
-      <workItem from="1754643947049" duration="3421000" />
+      <workItem from="1754643947049" duration="28918000" />
     </task>
+    <task id="LOCAL-00001" summary="finish LightSpring-JDBC">
+      <option name="closed" value="true" />
+      <created>1754647421368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754647421368</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish LightSpring-JDBC" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish LightSpring-JDBC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -162,6 +231,39 @@
           <url>file://$PROJECT_DIR$/lightSpring-JDBC/src/test/java/com/lightSpring/withTX/JdbcWithTxTest.java</url>
           <line>41</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lightSpring-Web/src/main/java/com/lightSpring/DispatcherServlet.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lightSpring-Web/src/main/java/com/lightSpring/DispatcherServlet.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lightSpring-Web/src/main/java/com/lightSpring/ContextLoaderListener.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lightSpring-Web/src/main/java/com/lightSpring/Utils/WebUtils.java</url>
+          <line>31</line>
+          <properties class="com.lightSpring.Utils.WebUtils" method="createPropertyResolver">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/lightSpring-Web/src/main/java/com/lightSpring/ContextLoaderListener.java</url>
+          <line>13</line>
+          <properties class="com.lightSpring.ContextLoaderListener" method="contextInitialized">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,5 +7,9 @@
     <file url="file://$PROJECT_DIR$/lightSpring-Context/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lightSpring-JDBC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lightSpring-JDBC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lightSpring-MVC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lightSpring-MVC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lightSpring-Web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lightSpring-Web/src/main/resources" charset="UTF-8" />
   </component>
 </project>

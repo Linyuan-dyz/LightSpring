@@ -488,8 +488,10 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         if (importAnnotation == null) {
             return;
         }
-        Class<?> clazz = importAnnotation.value();
-        list.add(clazz.getName());
+        Class<?>[] clazz = importAnnotation.value();
+        for (Class<?> cla : clazz) {
+            list.add(cla.getName());
+        }
 //        for (String value : values) {
 //            String name = value.substring(0, value.length() - ".class".length());
 //            name = name.replace('/', '.');

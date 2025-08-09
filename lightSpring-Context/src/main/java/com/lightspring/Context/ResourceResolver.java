@@ -124,7 +124,6 @@ public class ResourceResolver {
     }
 
     private void initializeProperty() {
-        //TODO：利用YamlUtils读取Yml类型文件
         try {
             InputStream inputStream = new FileInputStream(resourcePath);;
             Properties properties = new Properties();

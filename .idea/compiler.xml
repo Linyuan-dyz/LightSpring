@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lightSpring-Context" />
-        <module name="lightSpring-AOP" />
         <module name="lightSpring-JDBC" />
+        <module name="lightSpring-Web" />
+        <module name="lightSpring-AOP" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lightSpring-MVC" target="23" />
+    </bytecodeTargetLevel>
   </component>
 </project>
